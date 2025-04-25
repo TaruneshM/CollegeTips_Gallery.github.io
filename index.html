@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeTips | Memory Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+    <div class="theme-toggle" title="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <header class="hero">
+        <h1><span class="gradient-text">#CollegeTips</span> Moments</h1>
+        <p>Where memories spark joy ✨</p>
+    </header>
+
+    <div class="gallery-container">
+        <!-- Animated Filter Chips -->
+        <div class="filter-chips">
+            <button class="chip active" data-filter="all">All Photos</button>
+            <button class="chip" data-filter="team">Team Vibes <i class="fas fa-users"></i></button>
+            <button class="chip" data-filter="campaigns">Campaigns <i class="fas fa-bullhorn"></i></button>
+            <button class="chip" data-filter="fun">Campus Fun <i class="fas fa-gamepad"></i></button>
+            <button class="chip" data-filter="bts">BTS <i class="fas fa-film"></i></button>
+        </div>
+
+        <!-- Masonry Gallery -->
+        <div class="masonry-gallery">
+            <!-- Item 1 -->
+            <div class="masonry-item" data-category="team">
+                <div class="gallery-card">
+                    <img src="https://source.unsplash.com/random/300x450/?college,team" loading="lazy" alt="Team photo">
+                    <div class="card-overlay">
+                        <div class="likes"><i class="fas fa-heart"></i> 142</div>
+                        <h3>Annual Meet 2023</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2 (Wider) -->
+            <div class="masonry-item" data-category="campaigns" style="--w:2;">
+                <div class="gallery-card">
+                    <img src="https://source.unsplash.com/random/600x400/?poster,design" loading="lazy" alt="Campaign">
+                    <div class="card-overlay">
+                        <div class="likes"><i class="fas fa-heart"></i> 89</div>
+                        <h3>Anti-Bullying Week</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Add 10-12 more items with varying widths/heights -->
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" title="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
