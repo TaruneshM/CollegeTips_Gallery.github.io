@@ -1,60 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CollegeTips | Memory Gallery</title>
+    <title>CollegeTips Gallery</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body data-theme="light">
-    <div class="theme-toggle" title="Toggle theme">
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon"></i>
-    </div>
+    </button>
 
+    <!-- Header -->
     <header class="hero">
-        <h1><span class="gradient-text">#CollegeTips</span> Moments</h1>
-        <p>Where memories spark joy ✨</p>
+        <h1><span class="gradient-text">CollegeTips</span> Memories</h1>
+        <p>Relive your favorite moments</p>
     </header>
 
+    <!-- Gallery -->
     <div class="gallery-container">
-        <!-- Animated Filter Chips -->
+        <!-- Filter Buttons -->
         <div class="filter-chips">
-            <button class="chip active" data-filter="all">All Photos</button>
+            <button class="chip active" data-filter="all">All Media</button>
             <button class="chip" data-filter="team">Team Vibes <i class="fas fa-users"></i></button>
             <button class="chip" data-filter="campaigns">Campaigns <i class="fas fa-bullhorn"></i></button>
-            <button class="chip" data-filter="fun">Campus Fun <i class="fas fa-gamepad"></i></button>
+            <button class="chip" data-filter="campus">Campus Fun <i class="fas fa-gamepad"></i></button>
             <button class="chip" data-filter="bts">BTS <i class="fas fa-film"></i></button>
         </div>
 
-        <!-- Masonry Gallery -->
-        <div class="masonry-gallery">
-            <!-- Item 1 -->
-            <div class="masonry-item" data-category="team">
+        <!-- Gallery Grid -->
+        <div class="grid-gallery">
+            <!-- Team Section - 2 Images -->
+            <div class="grid-item" data-category="team">
                 <div class="gallery-card">
-                    <img src="https://source.unsplash.com/random/300x450/?college,team" loading="lazy" alt="Team photo">
+                    <div class="media-container">
+                        <img src="assets/images/team.jpg" loading="lazy" alt="Team photo 1">
+                    </div>
                     <div class="card-overlay">
-                        <div class="likes"><i class="fas fa-heart"></i> 142</div>
-                        <h3>Annual Meet 2023</h3>
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">142</span></button>
+                        <h3>Team Gathering</h3>
                     </div>
                 </div>
             </div>
-            <!-- Item 2 (Wider) -->
-            <div class="masonry-item" data-category="campaigns" style="--w:2;">
+            <div class="grid-item" data-category="team">
                 <div class="gallery-card">
-                    <img src="https://source.unsplash.com/random/600x400/?poster,design" loading="lazy" alt="Campaign">
+                    <div class="media-container">
+                        <img src="assets/images/team (2).jpg" loading="lazy" alt="Team photo 2">
+                    </div>
                     <div class="card-overlay">
-                        <div class="likes"><i class="fas fa-heart"></i> 89</div>
-                        <h3>Anti-Bullying Week</h3>
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">142</span></button>
+                        <h3>Team</h3>
                     </div>
                 </div>
             </div>
-            <!-- Add 10-12 more items with varying widths/heights -->
+
+            <!-- Campaign Section - 1 Video + 1 Image -->
+            <div class="grid-item" data-category="campaigns">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="assets/videos/campaign3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">89</span></button>
+                        <h3>Campaign</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-category="campaigns">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <img src="assets/images/campaign.jpg" loading="lazy" alt="Campaign image">
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">89</span></button>
+                        <h3>Campaign Prep</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus Section - 2 Videos -->
+            <div class="grid-item" data-category="campus">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="assets/videos/fun3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">76</span></button>
+                        <h3>Campus Fun</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-category="campus">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="assets/videos/fun2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">76</span></button>
+                        <h3>Campus Fun Day</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BTS Section - 1 Video + 2 Images -->
+            <div class="grid-item" data-category="bts">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="assets/videos/bts3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">112</span></button>
+                        <h3>Documentary BTS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-category="bts">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <img src="assets/images/bts1.jpg" loading="lazy" alt="BTS photo 1">
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">112</span></button>
+                        <h3>Behind the Scenes</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-category="bts">
+                <div class="gallery-card">
+                    <div class="media-container">
+                        <img src="assets/images/bts2.jpg" loading="lazy" alt="BTS photo 2">
+                    </div>
+                    <div class="card-overlay">
+                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">112</span></button>
+                        <h3>Behind the Scenes</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Floating Action Button -->
-    <button class="fab" title="Scroll to top">
+    <!-- Scroll-to-Top Button -->
+    <button class="fab" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
